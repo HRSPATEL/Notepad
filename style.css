@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
-    position: relative;
+
 }
 
 .font-size-control {
@@ -18,13 +18,14 @@ body {
     padding: 10px;
     font-size: 16px;
     background-color: #fff;
-    position: relative;
+
     border-left: 3px solid red;
     margin-left: 20px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.5) 1px, transparent 1px);
     background-size: 100% 25px;
     line-height: 25px;
     background-position: 0 12.5px;
+    margin-top: 60px;
 }
 
 #text-area {
@@ -60,4 +61,19 @@ body {
     height: 3px;
     background: linear-gradient(to right, red, blue);
     margin-bottom: 20px;
+}
+
+#top-bar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #007BFF;
+    z-index: 1000;  // Increase the z-index
 }
