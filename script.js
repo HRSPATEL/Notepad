@@ -24,3 +24,16 @@ fontSizeControl.addEventListener('input', function() {
     textArea.style.fontSize = this.value + 'px';
     localStorage.setItem('notepadFontSize', this.value);
 });
+
+
+const downloadBtn = document.getElementById('download-btn');
+
+downloadBtn.addEventListener('click', function() {
+    const text = textArea.value;
+    const blob = new Blob([text], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'notepad.txt';
+    a.click();
+});

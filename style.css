@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
+    position: relative;
 }
 
 .font-size-control {
@@ -35,4 +36,28 @@ body {
     background: transparent;
     line-height: 25px;
     font-size: 16px;
+}
+
+#download-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download-btn:hover {
+    background-color: #0056b3;
+}
+
+#top-line {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, red, blue);
+    margin-bottom: 20px;
 }
