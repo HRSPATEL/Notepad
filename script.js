@@ -37,3 +37,19 @@ downloadBtn.addEventListener('click', function() {
     a.download = 'notepad.txt';
     a.click();
 });
+
+
+const lineCounter = document.getElementById('line-counter');
+const wordCounter = document.getElementById('word-counter');
+
+textArea.addEventListener('input', function() {
+    const lines = textArea.value.split('\n').length;
+    const words = textArea.value.split(/[\n\s]+/).filter(function(word) {
+        return word !== '';
+    }).length;
+
+    lineCounter.textContent = 'Lines: ' + lines;
+    wordCounter.textContent = 'Words: ' + words;
+
+    localStorage.setItem('notepadText', textArea.value);
+});

@@ -26,6 +26,7 @@ body {
     line-height: 25px;
     background-position: 0 12.5px;
     margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 #text-area {
@@ -76,4 +77,18 @@ body {
     align-items: center;
     border-bottom: 3px solid #007BFF;
     z-index: 1000;  // Increase the z-index
+}
+
+#footer-bar {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #007BFF;
 }
