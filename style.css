@@ -1,44 +1,38 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 20px; /* Add some padding for aesthetics */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.font-size-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #notepad {
-    width: calc(100% - 40px); /* Subtract padding from width */
+    width: calc(100% - 40px);
     height: 100vh;
-    resize: none;
     border: none;
     padding: 10px;
     font-size: 16px;
-    background-color: #fff; /* White background for the text area */
-    position: relative; /* Position relative for absolute positioning */
-    border-left: 3px solid red; /* Red vertical line on the left */
-    margin-left: 20px; /* Create space to the left of the red line */
+    background-color: #fff;
+    position: relative;
+    border-left: 3px solid red;
+    margin-left: 20px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.5) 1px, transparent 1px);
     background-size: 100% 25px;
     line-height: 25px;
-    background-position: 0 7.5px;
+    background-position: 0 12.5px;
 }
 
-/* Style the horizontal lines */
-#notepad::before {
-    content: "";
-    position: absolute;
-    width: calc(100% - 20px); /* Adjust width to exclude space for red line and margin */
-    height: 1px; /* Height of horizontal lines */
-    /* background-color: blue; */
-    background-image: repeating-linear-gradient(to bottom, transparent, transparent 24px, blue 25px, blue 26px);
-    top: 0;
-    left: 0;
-}
-
-/* Style the white space for writing name and date */
-#notepad::after {
-    content: "Name: _______       Date: _______"; /* Customize as needed */
-    position: absolute;
-    top: 10px; /* Adjust top position as needed */
-    left: -15px; /* Adjust left position to align with the red line */
-    color: #777; /* Gray color for text */
-    font-style: italic; /* Italic style for text */
+#text-area {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: transparent;
+    line-height: 25px;
+    font-size: 16px;
 }

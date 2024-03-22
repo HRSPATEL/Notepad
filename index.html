@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <textarea id="notepad" placeholder="Start typing..."></textarea>
+
+    <div class="font-size-control">
+        <label for="font-size-control">Font Size:</label>
+        <input type="range" id="font-size-control" min="10" max="32">
+    </div>
+    
+    <div id="notepad">
+        <textarea id="text-area"></textarea>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
